@@ -20,7 +20,7 @@
 ![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Screenshot%202019-08-31%2023.38.54.png)
 ## Mock Profile Page (Draft)
 - The mock profile page will see many changes from this demo. The end goal is to have a clean layout that displays all pertinent information for the user along the top next to their profile pictures. There you will see the username, location, and level bar showcasing the level and badge the user has obtained through their commitment to service. Also provided is a search bar to allow searches for other users or organizations. And finally the two portions that are currently being developed are the personal feed, and future opportunities feed. The goal is to have them both be static infinite scrolling boxes that showcase connections pictures posts and comments, along with an easy one-click way to sign up for volunteering opportunities as they show up on the feed. 
-![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Screenshot%202019-08-31%2023.39.04.png)
+![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Screenshot%202019-09-11%2008.13.53.png)
 ## Badge Criteria Page
 - The badge criteria page is provided for all users to fully understand how to pursue and obtain different badges through 4ALL. Users will navigate to this page by clicking the current badge name on any profile, including their own.  
 ![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Screenshot%202019-09-05%2009.35.37.png)
