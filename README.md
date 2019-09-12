@@ -1,5 +1,5 @@
 ![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Logo%20(4ALL).jpg "Logo")
-#$ Name
+# Name
 <b><u>4ALL</u></b>
 
 ## Table of Contents  
