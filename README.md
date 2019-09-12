@@ -38,10 +38,10 @@
 
 # Wireframes
 *Profile View*
-![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Logon%20Page.PNG)
+![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Wireframes/Logon%20Page.PNG)
 
 *Sign Up Page*
-![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Sign%20Up%20Page.PNG)
+![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Wireframes/Sign%20Up%20Page.PNG)
 
 
 # Prototypes
