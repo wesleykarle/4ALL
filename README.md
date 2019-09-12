@@ -9,12 +9,12 @@
 
 - [Prototypes](#prototypes) 
 
-- [Test Database](#testdatabase)
+- [Database](#database)
 
 <a name="desciption"/>
 <a name="wireframes"/>
 <a name="prototypes"/>
-<a name="testdatabase"/>
+<a name="database"/>
 
 
 # Description
@@ -30,7 +30,7 @@
 # Prototypes
 [Mock Pages](https://github.com/wesleykarle/4ALL/tree/master/Mock%20Pages)
 
-# Test Database 
+# Database 
 [Database](https://github.com/wesleykarle/4ALL/blob/master/Project%20Code/Database)
 
 
