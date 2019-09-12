@@ -9,12 +9,12 @@
 
 - [Prototypes](#prototypes) 
 
-- [Test Database](#database)
+- [Test Database](#testdatabase)
 
 <a name="desciption"/>
 <a name="wireframes"/>
 <a name="prototypes"/>
-<a name="database"/>
+<a name="testdatabase"/>
 
 
 # Description
