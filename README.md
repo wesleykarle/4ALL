@@ -2,7 +2,7 @@
 # Name
 <b><u>4ALL</u></b>
 
-# Table of Contents  
+# Contents  
 - [Description](#description)  
 
 - [ERD](#erd) 
@@ -41,5 +41,5 @@
 
 
 
-[Table of Contents](#tableofcontents)
-<a name="tableofcontents"/>
+[Table of Contents](#contents)
+<a name="contents"/>
