@@ -27,11 +27,11 @@
 
 
 # Requirements
-| User (1)                                 | System (2)              | Software (3)   |
-| -----------------------------------------|:-----------------------:| --------------:|
-| 1.0 Access Website or App                | 2.0 Internet Connection |                |
-| 1.1 SignUp and Login                     |                         |                |
-| 1.2 Register for Volunteer opportunities |                         |                |
+| User (1)                                 | System (2)                         | Software (3)   |
+| -----------------------------------------|:----------------------------------:| --------------:|
+| 1.0 Access Website or App                | 2.0 Internet or Network Connection |                |
+| 1.1 SignUp and Login                     |                                    |                |
+| 1.2 Register for Volunteer opportunities |                                    |                |
 
 
 
