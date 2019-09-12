@@ -57,5 +57,5 @@
 2. Implement database 
 3. Create views for organizations
 
-[Table of Contents](#contents)
+^==[Table of Contents](#contents)
 <a name="contents"/>
