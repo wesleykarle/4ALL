@@ -14,7 +14,7 @@
 <a name="desciption"/>
 <a name="wireframes"/>
 <a name="prototypes"/>
-<a name="test database"/>
+<a name="testdatabase"/>
 
 
 # Description
