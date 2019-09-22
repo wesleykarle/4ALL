@@ -1,32 +1,24 @@
-use [4ALL];
+use [_4ALLWeb];
 drop table if exists dbo.Users;
 create table dbo.Users
 (
-UserName VARCHAR(20) NOT NULL,
-PRIMARY KEY (UserName),
+UserID INT NOT NULL IDENTITY(1, 1),
 FirstName VARCHAR(40) NOT NULL,
 LastName VARCHAR(40) NOT NULL,
-Age INT NOT NULL,
+Email VARCHAR(40) NOT NULL,
+UserName VARCHAR(20) NOT NULL,
+Password VARCHAR (20) NOT NULL,
 City VARCHAR(40) NOT NULL,
 State VARCHAR(40) NOT NULL,
-Country VARCHAR(40) NOT NULL,
-PhoneNumber VARCHAR(20) NOT NULL,
-Email VARCHAR(40) NOT NULL
+Zip VARCHAR(10) NOT NULL,
+PhoneNumber VARCHAR(25) NOT NULL,
+PRIMARY KEY (UserID),
 );
-INSERT INTO dbo.Users(UserName, FirstName, LastName, Age, City, State, Country, PhoneNumber, Email)
+INSERT INTO dbo.Users(FirstName, LastName, Email, UserName, Password, City, State, Zip, PhoneNumber)
 VALUES
-('BillySD', 'Billy', 'Bailey', 25, 'San Diego', 'California', 'USA', '(721) 928-3857', 'billytest@outlook.com'),
-('mandyp', 'Mandy', 'Cobb', 21, 'Los Angeles', 'California', 'USA', '(354) 260-1400', 'mandymandy@gmail.com'),
-('KhRocks', 'Kevin', 'Hill', 19, 'Seattle', 'Washington', 'USA', '(933) 732-2353', 'kt19@yahoo.com'),
-('Nat28M', 'Natalie', 'Mckinney', 28, 'Huntington', 'New York', 'USA', '(973) 672-3345', 'lstaf@me.com'),
-('ShawnKlein01', 'Shawn', 'Klein', 18, 'Riverside', 'California', 'USA', '(674) 774-3238', 'fbriere@me.com'),
-('CarterA', 'Amy', 'Carter', 31, 'Orlando', 'Florida', 'USA', '(601) 538-6279', 'odlyzko@att.net'),
-('LittleLouis', 'Max', 'Little', 27, 'St. Louis', 'Missouri', 'USA', '(351) 269-5559', 'seebs@att.net'),
-('BRita97', 'Rita', 'Boyd', 21, 'Lincoln', 'Nebraska', 'USA', '(324) 846-4509', 'chlim@comcast.net'),
-('SantossC', 'Clark', 'Santos', 29, 'Fort Wayne', 'Indiana', 'USA', '(735) 568-8145', 'rgarton@hotmail.com'),
-('AJennAZ', 'Alexander', 'Jennings', 25, 'Tucson', 'Arizona', 'USA', '(583) 821-6901', 'jsnover@icloud.com');
+('Test', 'User', 'testuser@4all.com', 'testuser123', 'test6yhnmju7^YHNMJU&', 'San Diego', 'California', '92123', '123-456-7899');
 --===============================================================================================================
-USE [4ALL];
+USE [_4ALLWeb];
 drop table if exists dbo.Organizations;
 CREATE TABLE Organizations 
 (
@@ -34,7 +26,9 @@ OrganizationName varchar(255) NOT NULL,
 PRIMARY KEY (OrganizationName),
 City varchar(255) NOT NULL,
 State varchar(255) NOT NULL,
-Country varchar(255) NOT NULL
+Country varchar(255) NOT NULL,
+UserID INT,
+FOREIGN KEY (UserID) REFERENCES Users (UserID)
 );
 INSERT INTO dbo.Organizations(OrganizationName, City, State, Country)
 VALUES
@@ -49,12 +43,12 @@ VALUES
 ('Save the Children Federation', 'Fairfield', 'Connecticut', 'USA'),
 ('Habitat for Humanity International', 'Americus', 'Georgia', 'USA');
 --===============================================================================================================
-USE [4ALL];
+USE [_4ALLWeb];
 drop table if exists dbo.Events;
 CREATE TABLE Events
 (
+PRIMARY KEY (EventName),
 OrganizationName varchar(255) NOT NULL,
-PRIMARY KEY (OrganizationName),
 EventName varchar(255) NOT NULL,
 EventDate varchar(255) NOT NULL,
 NumberOfOpenings INT NOT NULL,
@@ -64,7 +58,9 @@ City varchar(255) NOT NULL,
 State varchar(255) NOT NULL,
 Country varchar(255) NOT NULL,
 PhoneNumer varchar(255) NOT NULL,
-Email varchar(255) NOT NULL
+Email varchar(255) NOT NULL,
+TotalHours INT,
+FOREIGN KEY (TotalHours) REFERENCES Hours (TotalHours)
 );
 INSERT INTO dbo.Events(OrganizationName, EventName, EventDate, NumberOfOpenings, HrsAvailable, Address,
 						City, State, Country, PhoneNumer, Email)
@@ -73,14 +69,15 @@ VALUES
 ('New York City Police Department', 'Pops For Cops', '01 Sep 2019', 50, 3, '12 West Blvd', 'New York', 'New York', 'USA', '(711) 123, 813', 'nynycity@yahoo.com'),
 ('City of Oceanside Library', 'Tutoring', '05 Aug 2019 - 09 Aug 2019', 2, 5, '330 N Coast Hwy', 'Oceanside', 'California', 'USA', '(760) 123-1234', 'olibrary@mail.mail');
 --===============================================================================================================
-USE [4ALL];
+USE [_4ALLWeb];
 drop table if exists dbo.Hours;
 CREATE TABLE Hours
 (
+PRIMARY KEY (TotalHours),
+UserID INT,
 UserName varchar(20) NOT NULL,
-PRIMARY KEY (UserName),
 TotalHours INT,
-FOREIGN KEY (UserName) REFERENCES Users (UserName)
+FOREIGN KEY (UserID) REFERENCES Users (UserID)
 );
 INSERT INTO dbo.Hours(UserName, TotalHours)
 VALUES
@@ -95,32 +92,37 @@ VALUES
 ('SantossC', 3),
 ('AJennAZ', 17);
 --===============================================================================================================
-use [4ALL];
+use [_4ALLWeb];
 drop table if exists dbo.Badges;
 CREATE TABLE Badges
 (
+PRIMARY KEY (BadgeName),
+OrganizationName varchar(255) NOT NULL,
 BadgeName varchar(10) NOT NULL,
-Criteria varchar(255) NOT NULL,
+TotalHours INT,
 [Number Issued] INT NOT NULL,
 FilePath varchar(255) NOT NULL,
 Issuer varchar(10) NOT NULL
+FOREIGN KEY (TotalHours) REFERENCES Hours(TotalHours)
+
 );
-INSERT INTO dbo.Badges(BadgeName, Criteria, [Number Issued], FilePath, Issuer)
+INSERT INTO dbo.Badges(OrganizationName,BadgeName, [Number Issued], FilePath, Issuer)
 VALUES
-('Giver', '5 Hours or Less', 1, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL'),
-('Supporter', '10 Hours or Less', 1, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL'),
-('Believer', '20 Hours or Less', 1, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL'),
-('Devoted', '50 Hours or Less', 2, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL');
+('4ALL', 'Giver', 1, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL'),
+('4ALL', 'Supporter', 1, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL'),
+('4ALL', 'Believer', 1, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL'),
+('4ALL', 'Devoted', 2, 'http://easyanimatorpro.com/wp-content/uploads/igloo/679/images/user/meaj0erkkykocyjdgohl.png', '4ALL');
 --===============================================================================================================
-USE [4ALL];
+USE [_4ALLWeb];
 drop table if exists dbo.UserBadges;
 CREATE TABLE UserBadges
 (
-PRIMARY KEY (UserName,BadgeName),
+PRIMARY KEY (BadgeName),
+UserID INT,
 UserName varchar(20) NOT NULL,
 BadgeName varchar(10) NOT NULL,
 LinkedUrls varchar(255),
-FOREIGN KEY (UserName) REFERENCES Users (UserName)
+FOREIGN KEY (UserID) REFERENCES Users (UserID)
 );
 INSERT INTO dbo.UserBadges(UserName, BadgeName, LinkedUrls)
 VALUES
@@ -129,3 +131,7 @@ VALUES
 ('mandyp', 'Supporter', 'https://linkedin.com/test2'),
 ('LittleLouis', 'Devoted', 'https://facebook.com/test3'),
 ('BRita97', 'Believer', NULL);
+
+
+
+
