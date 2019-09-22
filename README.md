@@ -8,6 +8,8 @@
 
 - [ERD](#erd) 
 
+- [Diagram](#diagram)
+
 - [Wireframes](#wireframes)
 
 - [Prototypes](#prototypes) 
@@ -34,6 +36,10 @@
 
 # ERD
 ![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Documents/Entity%20Relationship%20Diagram%20(ERD).png)
+
+
+# Diagram
+![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Documents/Database%20Diagram.png)
 
 
 # Wireframes
