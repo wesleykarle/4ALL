@@ -1,15 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Sign Up";
-}
-
-
+@model UserData
 <!DOCTYPE html>
 <html>
 <body>
     <!--Top-->
     <div class="jumbotron" align="center">
         <h1 class="display-4">Sign Up</h1>
-        <h4 class="display-5">
+        <h4 class="display-5"></h4>
             Continue using one of the following Applications:</h1>
             <hr class="top line">
             <div align="middle">
@@ -18,24 +14,23 @@
                 <a href="https://www.linkedin.com/" class="btn btn-primary btn-md">LinkedIn</a>
             </div>
             </p>
-            @using (Html.BeginForm("SignUp", "UserData", FormMethod.Post))
-            {
-                <form>
+
+            <form asp-action="SignUp" method="get">
                 <div class="form-row">
                     <div class="col-sm-6">
-                        <label for="validationDefault01">FirstName</label>
+                        <label for="validationDefault01">@Model.FirstName</label>
                         <input type="text" class="form-control" id="validationDefault01" placeholder="First name" required>
                     </div>
                     <div class="col-sm-6">
-                        <label for="validationDefault02">LastName</label>
+                        <label for="validationDefault02">@Model.LastName</label>
                         <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
                     </div>
                     <div class="col-sm-6">
-                        <label for="validationDefault02">Email</label>
+                        <label for="validationDefault02">@Model.Email</label>
                         <input type="text" class="form-control" id="validationDefault03" placeholder="Email" required>
                     </div>
                     <div class="col-sm-3">
-                        <label for="validationDefaultUsername">Username</label>
+                        <label for="validationDefaultUsername">@Model.UserName</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroupPrepend2"></span>
@@ -44,17 +39,17 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <label for="validationDefault02">Password</label>
+                        <label for="validationDefault02">@Model.Password</label>
                         <input type="Password" class="form-control" id="validationDefault02" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label for="validationDefault03">City</label>
+                        <label for="validationDefault03">@Model.City</label>
                         <input type="text" class="form-control" id="validationDefault04" placeholder="City" required>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <label for="inputState">State</label>
+                        <label for="inputState">@Model.State</label>
                         <select id="inputState" class="form-control" required="required">
                             <option selected>Choose...</option>
                             <option value="AL">Alabama</option>
@@ -111,12 +106,12 @@
                         </select>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <label for="validationDefault05">Zip</label>
+                        <label for="validationDefault05">@Model.Zip</label>
                         <input type="text" class="form-control" id="validationDefault06" placeholder="Zip" required>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="validationDefault05">PhoneNumber</label>
+                    <label for="validationDefault05">@Model.PhoneNumber</label>
                     <input type="text" class="form-control" id="validationDefault06" placeholder="Phone Number" required>
                 </div>
 
@@ -129,12 +124,9 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary" type="submit">Submit form</button>
-
-              </form>
-            }
-
-
+                <button class="btn btn-primary" type="submit" href="@ViewBag">Submit form</button>
+            </form>
+</div>
 </body>
 </html>
 
