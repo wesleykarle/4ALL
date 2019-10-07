@@ -78,5 +78,5 @@
 # Sprint
 [Sprint](https://github.com/wesleykarle/4ALL/projects/2)
 
-^==[Table of Contents](#contents)
+:arrow_up [Table of Contents](#contents)
 <a name="contents"/>
