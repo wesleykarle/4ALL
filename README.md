@@ -16,7 +16,7 @@
 
 - [Database](#database)
 
-- [TODO](#todo)
+- [Sprint](#sprint)
 
 <a name="desciption"/>
 <a name="requirements"/>
@@ -24,7 +24,7 @@
 <a name="wireframes"/>
 <a name="prototypes"/>
 <a name="database"/>
-<a name="todo"/>
+<a name="sprint">
 
 # Description
 4ALL is a vision of mine that would create a new, easier alternative to locate and sign up for volunteering opportunities in your local community and beyond. Users and Organizations will be able to easily connect on a social media backed framework solely intended to serve others. Users will be able to track their community service hours and build their profiles to use for a multitude of reasons including Academically, Professionally, and Spiritually. 
@@ -75,10 +75,8 @@
 [Database](https://github.com/wesleykarle/4ALL/blob/master/Project%20Code/Database)
 
 
-# TODO
-1. Expand personal and opportunities feeds for profile page
-2. Implement database 
-3. Create views for organizations
+# Sprint
+[Sprint](https://github.com/wesleykarle/4ALL/projects/2)
 
 ^==[Table of Contents](#contents)
 <a name="contents"/>
