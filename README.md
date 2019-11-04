@@ -31,8 +31,60 @@
 
 
 # Requirements
-![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Documents/RTM.png)
 
+### Entrance Requirements
+
+|   __ID__    |                             __Description__                             | __Test Method__ |
+|-------------|-------------------------------------------------------------------------|-----------------|
+| 1           | User successfully accesses website                                      | Inspection      |
+| 1.1         | User creates new account                                                | Demonstration   |
+| 1.2         | User Loggs in/ Accesses personal account                                | Demonstration   |
+| 2           | Correct Email renders for signed in user                                | Inspection      |
+| 2.1         | Links inside main dropdown navigate the user correctly                  | Test            |
+| 2.2         | User successfully signs out of account                                  | Test            |
+| 2.3         | Pages scale for mobile use                                              | Inspection      |
+| 3           | User can upload picture or input text for post                          | Demonstration   |
+| 3.1         | User selects specific criteria for volunteer opportunity                | Demonstration   |
+| 4           | Post to personal feed                                                   | Inspection      |
+| 4.1         | User Submits volunteer submission, sending information to their history | Inspection      |
+
+### Traceability
+| __ID__  |       __1__         |          __2__        |         __3__         |      __4__          |
+|---------|---------------------|-----------------------|-----------------------|---------------------|
+| 1       | :heavy_check_mark:  |                       |                       |                     |
+| 1.1     | :heavy_check_mark:  |                       |                       |                     |
+| 1.2     | :heavy_check_mark:  |                       |                       |                     |
+| 2       |                     | :heavy_check_mark:    |                       |                     |
+| 2.1     |                     | :heavy_check_mark:    |                       |                     |
+| 2.2     |                     | :heavy_check_mark:    |                       |                     |
+| 2.3     |                     | :heavy_check_mark:    |                       |                     |
+| 3       |                     |                       | :heavy_check_mark:    |                     |
+| 3.1     |                     |                       | :heavy_check_mark:    |                     |
+| 4       |                     |                       | :heavy_check_mark:    | :x:                 |
+| 4.1     |                     |                       | :heavy_check_mark:    | :x:                 |
+Test Casses traced to a test case: 100%
+
+
+### Exit Criteria
+
+| __ID__  |                           __Test Procedure__                       | __Req__ | __Status__  | __Date__    | 
+|---------|--------------------------------------------------------------------|---------|-------------|-------------|
+| 1       | Enter correct URL: https://4allwebapp.azurewebsites.net/           | 1       | Passed      | 2019-11-03  |
+| 1.1     | User navigates to Sign Up tab after ID 1                           | 1       | Passed      | 2019-11-03  |
+| 1.2     | User Clicks Profile tab after sign up                              | 1,1.1   | Passed      | 2019-11-03  |
+| 2       | Navigate to profile and view email listed below picture            | 1 - 1.2 | Passed      | 2019-11-03  |
+| 2.1     | Click dropdown next to meu on profile                              | 1, 2    | Passed      | 2019-11-03  |
+| 2.2     | Menu dropdown --> Setting --> Sign Out                             | 1 - 2   | Passed      | 2019-11-03  |
+| 2.3     | Mobile phone, enter url listed in ID 1                             | 1 - 2   | Passed      | 2019-11-03  |
+| 3       | Post --> Choose Files                                              | 1 - 3   | Passed      | 2019-11-03  |
+| 3.1     | Volunteer with Button --> Choose: Hours, Date, Location            | 1 - 3.1 | Passed      | 2019-11-03  |
+| 4       | Post --> Choose Files --> Post                                     | 3, 4    | Failed      | 2019-11-03  |
+| 4.1     | Volunteer with Button --> Choose: Hours, Date, Location --> Submit | 3, 4    | Failed      | 2019-11-03  |
+Test Casses passing: 81%
+
+###### Review Findings:
+- Layout of some buttons/ text positionally instead of size.
+- Page renders back to the top after hitting settings the first time, but not after.
 
 # ERD
 ![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Documents/Entity%20Relationship%20Diagram%20(ERD).png)
