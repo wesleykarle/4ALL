@@ -83,7 +83,7 @@ Test Casses traced to a test case: 100%
 Test Casses passing: 81%
 
 ###### Review Findings:
-- Layout of some buttons/ text positionally instead of size.
+- Layout of some buttons/ text move instead of re-size in mobile view.
 - Page renders back to the top after hitting settings the first time, but not after.
 
 # ERD
