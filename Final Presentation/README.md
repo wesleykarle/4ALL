@@ -78,3 +78,5 @@ an application for simply giving back to other and doing good.
 1. There are many different technologies out there, find the best one suitable for your application and stick with it. 
 2. I personally spent too much time on design, and not enough time on actual logic. 
 3. High expectations vs. Realistic Goals
+
+![Alt Text](https://media.giphy.com/media/UlzvVkHetWW4w/giphy.gif)
