@@ -1,7 +1,7 @@
 # Software Development Life Cycle
 
 # Solution
-- Technologies include ASP.NET Blazor, Bootstrap, Azure.
+- Technologies include Blazor, Bootstrap, and Azure.
 
 # Architecture and Code 
 
