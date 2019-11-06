@@ -69,7 +69,7 @@ an application for simply giving back to other and doing good.
 - Future Developments will further or complete the project, bringing features such as Messaging and Google Maps Integration. 
 
 # Architecture and Code 
--- <Link and pictures to Code>
+![Alt text](https://github.com/wesleykarle/4ALL/blob/master/Documents/Final%20BreakDown.png)
   
 # Demonstration
 [4ALL](https://4allwebapp.azurewebsites.net)
